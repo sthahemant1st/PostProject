@@ -23,7 +23,8 @@ class FeedsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
-        viewModel.viewDidLoad()
+//        viewModel.viewDidLoad()
+//        alert(message: "Hemant", title: "Shrestha", okAction: nil)
     }
 
 }
