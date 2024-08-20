@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import ProgressHUD
 
 extension UIViewController: BaseViewType {
     func showProgressHud() {
-        // TODO: implement me
+        ProgressHUD.animate(interaction: false)
     }
     
     func hideProgressHud() {
-        
+        ProgressHUD.dismiss()
     }
     
     func alert(message: String?, title: String?, okAction: (() -> Void)?) {
