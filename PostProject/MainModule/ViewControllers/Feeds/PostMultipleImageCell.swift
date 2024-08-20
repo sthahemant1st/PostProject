@@ -90,9 +90,6 @@ class PostMultipleImageCell: UICollectionViewCell {
         nameLabel.text = ""
         postTextLabel.text = ""
         images = []
-        
-        loadImageTask?.cancel()
-        loadImageTask = nil
     }
     
     func configure(with post: Post) {
@@ -130,34 +127,6 @@ class PostMultipleImageCell: UICollectionViewCell {
             configuration: layoutConfiguration
         )
         return layout
-    }
-    
-    private var loadImageTask: URLSessionDataTask?
-    private func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
-        loadImageTask = URLSession.shared.dataTask(with: url) { data, response, error in
-            // Check for errors and ensure there's data
-            if let error = error {
-                print("Error loading image: \(error)")
-                completion(nil)
-                return
-            }
-            
-            guard let data else {
-                completion(nil)
-                return
-            }
-            guard let image = UIImage(data: data) else {
-                completion(nil)
-                return
-            }
-            
-            // Return the loaded image on the main thread
-            DispatchQueue.main.async {
-                completion(image)
-            }
-        }
-        
-        loadImageTask?.resume()
     }
 }
 

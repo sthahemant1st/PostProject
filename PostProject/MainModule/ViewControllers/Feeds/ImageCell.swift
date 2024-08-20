@@ -12,6 +12,7 @@ class ImageCell: UICollectionViewCell {
     static let reuseIdentifier = "ImageCell"
     
     private let postImageView = UIImageView()
+    private let imageLoader = ImageLoader()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -40,45 +41,16 @@ class ImageCell: UICollectionViewCell {
     override func prepareForReuse() {
         postImageView.image = nil
         
-        loadImageTask?.cancel()
-        loadImageTask = nil
+        imageLoader.cancel()
     }
     
     func configure(with image: String) {
         if let postImageURL = URL(string: image) {
-            loadImage(from: postImageURL) { image in
+            imageLoader.loadImage(from: postImageURL) { image in
                 DispatchQueue.main.async {
                     self.postImageView.image = image
                 }
             }
         }
-    }
-    
-    private var loadImageTask: URLSessionDataTask?
-    func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
-        loadImageTask = URLSession.shared.dataTask(with: url) { data, response, error in
-            // Check for errors and ensure there's data
-            if let error = error {
-                print("Error loading image: \(error)")
-                completion(nil)
-                return
-            }
-            
-            guard let data else {
-                completion(nil)
-                return
-            }
-            guard let image = UIImage(data: data) else {
-                completion(nil)
-                return
-            }
-            
-            // Return the loaded image on the main thread
-            DispatchQueue.main.async {
-                completion(image)
-            }
-        }
-        
-        loadImageTask?.resume()
     }
 }

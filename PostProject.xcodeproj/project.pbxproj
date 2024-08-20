@@ -50,6 +50,7 @@
 		DDEB7EC92C74EBAA00B17DF5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7EC82C74EBAA00B17DF5 /* UIView+Extension.swift */; };
 		DDEB7ECB2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECA2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift */; };
 		DDEB7ECD2C74F33800B17DF5 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */; };
+		DDEB7ECF2C74FF1800B17DF5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECE2C74FF1800B17DF5 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		DDEB7EC82C74EBAA00B17DF5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DDEB7ECA2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Extension.swift"; sourceTree = "<group>"; };
 		DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		DDEB7ECE2C74FF1800B17DF5 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			children = (
 				DDB72C042C74550900E6B912 /* Extensions */,
 				DDB72C0C2C745AE000E6B912 /* JsonHelper.swift */,
+				DDEB7ECE2C74FF1800B17DF5 /* ImageLoader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				DDB72C252C7461B200E6B912 /* PostRepo.swift in Sources */,
 				DDEB7EC72C74EB1500B17DF5 /* PostMultipleImageCell.swift in Sources */,
 				DDEB7EC92C74EBAA00B17DF5 /* UIView+Extension.swift in Sources */,
+				DDEB7ECF2C74FF1800B17DF5 /* ImageLoader.swift in Sources */,
 				DDB72BEA2C744EBE00E6B912 /* EndPointProtocol.swift in Sources */,
 				DDB72BA12C744AE500E6B912 /* AppDelegate.swift in Sources */,
 				DDB72BEB2C744EBE00E6B912 /* NetworkCaller.swift in Sources */,
