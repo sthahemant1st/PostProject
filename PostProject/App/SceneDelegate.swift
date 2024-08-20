@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private func initializeViewController() {
         let useCase = PostsUseCaseImpl(repo: PostNetworkRepo())
+//        let useCase = PostPreviewUseCase()
         let viewModel = FeedsViewModel(postsUseCase: useCase)
         let viewController = FeedsViewController(viewModel: viewModel)
         viewModel.viewType = viewController

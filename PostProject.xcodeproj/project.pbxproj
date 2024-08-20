@@ -30,7 +30,7 @@
 		DDB72BF52C744EBE00E6B912 /* Network+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE72C744EBE00E6B912 /* Network+TypeAlias.swift */; };
 		DDB72BFA2C744F9100E6B912 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BF92C744F9100E6B912 /* Post.swift */; };
 		DDB72BFC2C744FCC00E6B912 /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BFB2C744FCC00E6B912 /* FeedsViewModel.swift */; };
-		DDB72BFF2C74501A00E6B912 /* Post.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB72BFE2C74501A00E6B912 /* Post.json */; };
+		DDB72BFF2C74501A00E6B912 /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = DDB72BFE2C74501A00E6B912 /* Posts.json */; };
 		DDB72C022C74546C00E6B912 /* BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C012C74546C00E6B912 /* BaseViewType.swift */; };
 		DDB72C062C74552900E6B912 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C052C74552900E6B912 /* UIViewController+Extension.swift */; };
 		DDB72C082C74556C00E6B912 /* UIViewController+BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C072C74556C00E6B912 /* UIViewController+BaseViewType.swift */; };
@@ -45,6 +45,7 @@
 		DDB72C292C7462CF00E6B912 /* BaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C282C7462CF00E6B912 /* BaseRepo.swift */; };
 		DDEB7EBE2C746BDC00B17DF5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DDEB7EBD2C746BDC00B17DF5 /* RxCocoa */; };
 		DDEB7EC02C746BDC00B17DF5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DDEB7EBF2C746BDC00B17DF5 /* RxSwift */; };
+		DDEB7EC22C74769D00B17DF5 /* PostPreviewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7EC12C74769D00B17DF5 /* PostPreviewUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,7 @@
 		DDB72BE72C744EBE00E6B912 /* Network+TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Network+TypeAlias.swift"; sourceTree = "<group>"; };
 		DDB72BF92C744F9100E6B912 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DDB72BFB2C744FCC00E6B912 /* FeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
-		DDB72BFE2C74501A00E6B912 /* Post.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Post.json; sourceTree = "<group>"; };
+		DDB72BFE2C74501A00E6B912 /* Posts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Posts.json; sourceTree = "<group>"; };
 		DDB72C012C74546C00E6B912 /* BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewType.swift; sourceTree = "<group>"; };
 		DDB72C052C74552900E6B912 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DDB72C072C74556C00E6B912 /* UIViewController+BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BaseViewType.swift"; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 		DDB72C242C7461B200E6B912 /* PostRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepo.swift; sourceTree = "<group>"; };
 		DDB72C262C74621800E6B912 /* PostNetworkRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetworkRepo.swift; sourceTree = "<group>"; };
 		DDB72C282C7462CF00E6B912 /* BaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepo.swift; sourceTree = "<group>"; };
+		DDEB7EC12C74769D00B17DF5 /* PostPreviewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,7 +281,7 @@
 		DDB72BFD2C744FE700E6B912 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				DDB72BFE2C74501A00E6B912 /* Post.json */,
+				DDB72BFE2C74501A00E6B912 /* Posts.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -349,6 +351,7 @@
 			children = (
 				DDB72C1E2C7460F600E6B912 /* PostsUseCase.swift */,
 				DDB72C202C74614E00E6B912 /* PostsUseCaseImpl.swift */,
+				DDEB7EC12C74769D00B17DF5 /* PostPreviewUseCase.swift */,
 			);
 			path = PostsUseCase;
 			sourceTree = "<group>";
@@ -477,7 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB72BFF2C74501A00E6B912 /* Post.json in Resources */,
+				DDB72BFF2C74501A00E6B912 /* Posts.json in Resources */,
 				DDB72BAA2C744AE600E6B912 /* Assets.xcassets in Resources */,
 				DDB72BAD2C744AE600E6B912 /* Base in Resources */,
 			);
@@ -508,6 +511,7 @@
 				DDB72BFC2C744FCC00E6B912 /* FeedsViewModel.swift in Sources */,
 				DDB72BD72C744E9800E6B912 /* ParentCoordinator.swift in Sources */,
 				DDB72BA52C744AE500E6B912 /* FeedsViewController.swift in Sources */,
+				DDEB7EC22C74769D00B17DF5 /* PostPreviewUseCase.swift in Sources */,
 				DDB72BF12C744EBE00E6B912 /* Data+Extension.swift in Sources */,
 				DDB72BEE2C744EBE00E6B912 /* ConsoleNetworkLogger.swift in Sources */,
 				DDB72C1F2C7460F600E6B912 /* PostsUseCase.swift in Sources */,

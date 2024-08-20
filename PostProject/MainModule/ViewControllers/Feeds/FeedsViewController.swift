@@ -12,11 +12,9 @@ import RxCocoa
 class FeedsViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-//        collectionView.register(PostCell.self, forCellWithReuseIdentifier: PostCell.reuseIdentifier)
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PostCell.reuseIdentifier")
+        collectionView.register(PostCell.self, forCellWithReuseIdentifier: PostCell.reuseIdentifier)
         collectionView.backgroundColor = .white
         return collectionView
     }()
@@ -38,20 +36,13 @@ class FeedsViewController: UIViewController {
         setupUI()
         bindViewModel()
         viewModel.fetchPosts()
-//        view.backgroundColor = .systemTeal
-//        do {
-//            let posts = try JsonHelper.convert(name: "Post", type: [Post].self)
-//            print(posts)
-//        } catch {
-//            print(error)
-//        }
-//        viewModel.viewDidLoad()
-//        alert(message: "Hemant", title: "Shrestha", okAction: nil)
     }
     
     private func setupUI() {
+        title = "Feed"
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.delegate = self
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -61,18 +52,47 @@ class FeedsViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.posts
-            .debug("Hemant")
+        viewModel.postsObservable
             .bind(
                 to: collectionView.rx.items(
-                    cellIdentifier: "PostCell.reuseIdentifier",
-                    cellType: UICollectionViewCell.self
+                    cellIdentifier: PostCell.reuseIdentifier,
+                    cellType: PostCell.self
                 )
             ) { row, post, cell in
-//                cell.configure(with: post)
-                cell.backgroundColor = .red
+                cell.configure(with: post)
             }
             .disposed(by: disposeBag)
     }
 
+}
+
+extension FeedsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        let dummyCell = PostCell()
+        let post: Post = viewModel.posts[indexPath.row]
+        dummyCell.configure(with: post)
+        
+        // Calculate the target size fitting width while allowing height to be dynamic
+        let targetSize = CGSize(width: collectionView.frame.width - 32, height: UIView.layoutFittingCompressedSize.height)
+        
+        // Calculate the actual size based on Auto Layout
+        let estimatedSize = dummyCell.systemLayoutSizeFitting(
+            targetSize,
+            withHorizontalFittingPriority: .required,
+            verticalFittingPriority: .fittingSizeLevel
+        )
+        
+        return estimatedSize
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .init(top: 16, left: 16, bottom: 16, right: 16)
+    }
 }

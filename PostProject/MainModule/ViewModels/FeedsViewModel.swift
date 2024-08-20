@@ -17,8 +17,12 @@ final class FeedsViewModel {
     
     private let _posts = BehaviorRelay<[Post]>(value: [])
     
-    var posts: Observable<[Post]> {
+    var postsObservable: Observable<[Post]> {
         return _posts.asObservable()
+    }
+    
+    var posts: [Post] {
+        return _posts.value
     }
     
     var loadMoreTrigger = PublishSubject<Void>()
@@ -38,6 +42,7 @@ final class FeedsViewModel {
                 let posts = try await postsUseCase.fetch()
                 self._posts.accept(posts)
             } catch {
+                viewType?.alert(message: error.localizedDescription, title: "Error", okAction: nil)
                 print(error)
             }
         }
