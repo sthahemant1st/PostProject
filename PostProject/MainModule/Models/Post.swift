@@ -9,13 +9,13 @@ import Foundation
 
 struct Post: Decodable {
     let id: String
-    let createdAt: Date
+    let createdAt: String
     let postText: String
-    let images: [URL]
+    let images: [String]
     let creator: Creator
     
     struct Creator: Decodable {
-        let avatar: URL
+        let avatar: String
         let firstName: String
         let lastName: String
     }

@@ -23,6 +23,12 @@ class FeedsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemTeal
+        do {
+            let posts = try JsonHelper.convert(name: "Post", type: [Post].self)
+            print(posts)
+        } catch {
+            print(error)
+        }
 //        viewModel.viewDidLoad()
 //        alert(message: "Hemant", title: "Shrestha", okAction: nil)
     }

@@ -38,6 +38,7 @@
 		DDB72C062C74552900E6B912 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C052C74552900E6B912 /* UIViewController+Extension.swift */; };
 		DDB72C082C74556C00E6B912 /* UIViewController+BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C072C74556C00E6B912 /* UIViewController+BaseViewType.swift */; };
 		DDB72C0B2C74574600E6B912 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DDB72C0A2C74574600E6B912 /* ProgressHUD */; };
+		DDB72C0D2C745AE000E6B912 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C0C2C745AE000E6B912 /* JsonHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		DDB72C012C74546C00E6B912 /* BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewType.swift; sourceTree = "<group>"; };
 		DDB72C052C74552900E6B912 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DDB72C072C74556C00E6B912 /* UIViewController+BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BaseViewType.swift"; sourceTree = "<group>"; };
+		DDB72C0C2C745AE000E6B912 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,27 +242,29 @@
 		DDB72BF62C744F2800E6B912 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				DDB72BF72C744F5600E6B912 /* Feeds */,
+				DDB72BF82C744F6500E6B912 /* Models */,
+				DDB72BF72C744F5600E6B912 /* ViewControllers */,
+				DDB72C112C745CF800E6B912 /* ViewModels */,
+				DDB72C102C745CD200E6B912 /* UseCases */,
+				DDB72C0F2C745CCA00E6B912 /* Repos */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
 		};
-		DDB72BF72C744F5600E6B912 /* Feeds */ = {
+		DDB72BF72C744F5600E6B912 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDB72BA42C744AE500E6B912 /* FeedsViewController.swift */,
-				DDB72BFB2C744FCC00E6B912 /* FeedsViewModel.swift */,
-				DDB72BF82C744F6500E6B912 /* Model */,
+				DDB72C0E2C745C5100E6B912 /* Feeds */,
 			);
-			path = Feeds;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		DDB72BF82C744F6500E6B912 /* Model */ = {
+		DDB72BF82C744F6500E6B912 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				DDB72BF92C744F9100E6B912 /* Post.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DDB72BFD2C744FE700E6B912 /* JSON */ = {
@@ -284,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB72C042C74550900E6B912 /* Extensions */,
+				DDB72C0C2C745AE000E6B912 /* JsonHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -294,6 +299,36 @@
 				DDB72C052C74552900E6B912 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDB72C0E2C745C5100E6B912 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72BA42C744AE500E6B912 /* FeedsViewController.swift */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
+		DDB72C0F2C745CCA00E6B912 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		DDB72C102C745CD200E6B912 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DDB72C112C745CF800E6B912 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72BFB2C744FCC00E6B912 /* FeedsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,6 +487,7 @@
 				DDB72BEA2C744EBE00E6B912 /* EndPointProtocol.swift in Sources */,
 				DDB72BA12C744AE500E6B912 /* AppDelegate.swift in Sources */,
 				DDB72BEB2C744EBE00E6B912 /* NetworkCaller.swift in Sources */,
+				DDB72C0D2C745AE000E6B912 /* JsonHelper.swift in Sources */,
 				DDB72C022C74546C00E6B912 /* BaseViewType.swift in Sources */,
 				DDB72BE92C744EBE00E6B912 /* EndPoint.swift in Sources */,
 				DDB72BA32C744AE500E6B912 /* SceneDelegate.swift in Sources */,
