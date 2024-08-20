@@ -11,21 +11,21 @@ import RxCocoa
 
 final class FeedsViewModel {
     weak var viewType: BaseViewType?
-    
     private let postsUseCase: PostsUseCase
     private let disposeBag = DisposeBag()
     
     private let _posts = BehaviorRelay<[Post]>(value: [])
+    private let _isFetching = BehaviorRelay(value: false)
     
+    var isFetchingObs: Observable<Bool> {
+        _isFetching.asObservable()
+    }
     var postsObservable: Observable<[Post]> {
         return _posts.asObservable()
     }
-    
     var posts: [Post] {
         return _posts.value
     }
-    
-    var loadMoreTrigger = PublishSubject<Void>()
     
     init(postsUseCase: PostsUseCase) {
         self.postsUseCase = postsUseCase
@@ -36,14 +36,20 @@ final class FeedsViewModel {
     
     func fetchPosts() {
         Task { @MainActor in
-            viewType?.showProgressHud()
-            defer { viewType?.hideProgressHud() }
+            defer { _isFetching.accept(false) }
+            _isFetching.accept(true)
+            _posts.accept([])
+            
             do {
                 let posts = try await postsUseCase.fetch()
                 self._posts.accept(posts)
             } catch {
-                viewType?.alert(message: error.localizedDescription, title: "Error", okAction: nil)
-                print(error)
+                _posts.accept([])
+                viewType?.alert(
+                    message: error.localizedDescription,
+                    title: "Error",
+                    okAction: nil
+                )
             }
         }
     }

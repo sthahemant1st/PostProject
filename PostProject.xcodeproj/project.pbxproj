@@ -46,6 +46,10 @@
 		DDEB7EBE2C746BDC00B17DF5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DDEB7EBD2C746BDC00B17DF5 /* RxCocoa */; };
 		DDEB7EC02C746BDC00B17DF5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DDEB7EBF2C746BDC00B17DF5 /* RxSwift */; };
 		DDEB7EC22C74769D00B17DF5 /* PostPreviewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7EC12C74769D00B17DF5 /* PostPreviewUseCase.swift */; };
+		DDEB7EC72C74EB1500B17DF5 /* PostMultipleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7EC62C74EB1500B17DF5 /* PostMultipleImageCell.swift */; };
+		DDEB7EC92C74EBAA00B17DF5 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7EC82C74EBAA00B17DF5 /* UIView+Extension.swift */; };
+		DDEB7ECB2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECA2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift */; };
+		DDEB7ECD2C74F33800B17DF5 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,10 @@
 		DDB72C262C74621800E6B912 /* PostNetworkRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetworkRepo.swift; sourceTree = "<group>"; };
 		DDB72C282C7462CF00E6B912 /* BaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepo.swift; sourceTree = "<group>"; };
 		DDEB7EC12C74769D00B17DF5 /* PostPreviewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewUseCase.swift; sourceTree = "<group>"; };
+		DDEB7EC62C74EB1500B17DF5 /* PostMultipleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMultipleImageCell.swift; sourceTree = "<group>"; };
+		DDEB7EC82C74EBAA00B17DF5 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		DDEB7ECA2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Extension.swift"; sourceTree = "<group>"; };
+		DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				DDB72C052C74552900E6B912 /* UIViewController+Extension.swift */,
+				DDEB7EC82C74EBAA00B17DF5 /* UIView+Extension.swift */,
+				DDEB7ECA2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,6 +328,8 @@
 			children = (
 				DDB72BA42C744AE500E6B912 /* FeedsViewController.swift */,
 				DDB72C192C745EC600E6B912 /* PostCell.swift */,
+				DDEB7EC62C74EB1500B17DF5 /* PostMultipleImageCell.swift */,
+				DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -511,6 +523,7 @@
 				DDB72BFC2C744FCC00E6B912 /* FeedsViewModel.swift in Sources */,
 				DDB72BD72C744E9800E6B912 /* ParentCoordinator.swift in Sources */,
 				DDB72BA52C744AE500E6B912 /* FeedsViewController.swift in Sources */,
+				DDEB7ECB2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift in Sources */,
 				DDEB7EC22C74769D00B17DF5 /* PostPreviewUseCase.swift in Sources */,
 				DDB72BF12C744EBE00E6B912 /* Data+Extension.swift in Sources */,
 				DDB72BEE2C744EBE00E6B912 /* ConsoleNetworkLogger.swift in Sources */,
@@ -530,9 +543,12 @@
 				DDB72C1A2C745EC600E6B912 /* PostCell.swift in Sources */,
 				DDB72BED2C744EBE00E6B912 /* URLSessionProtocol.swift in Sources */,
 				DDB72C252C7461B200E6B912 /* PostRepo.swift in Sources */,
+				DDEB7EC72C74EB1500B17DF5 /* PostMultipleImageCell.swift in Sources */,
+				DDEB7EC92C74EBAA00B17DF5 /* UIView+Extension.swift in Sources */,
 				DDB72BEA2C744EBE00E6B912 /* EndPointProtocol.swift in Sources */,
 				DDB72BA12C744AE500E6B912 /* AppDelegate.swift in Sources */,
 				DDB72BEB2C744EBE00E6B912 /* NetworkCaller.swift in Sources */,
+				DDEB7ECD2C74F33800B17DF5 /* ImageCell.swift in Sources */,
 				DDB72C0D2C745AE000E6B912 /* JsonHelper.swift in Sources */,
 				DDB72C022C74546C00E6B912 /* BaseViewType.swift in Sources */,
 				DDB72BE92C744EBE00E6B912 /* EndPoint.swift in Sources */,

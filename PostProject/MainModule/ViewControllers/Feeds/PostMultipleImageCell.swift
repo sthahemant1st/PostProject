@@ -1,5 +1,5 @@
 //
-//  PostCell.swift
+//  PostMultipleImageCell.swift
 //  PostProject
 //
 //  Created by Hemant Shrestha on 20/08/2024.
@@ -8,13 +8,19 @@
 import UIKit
 import SDWebImage
 
-class PostCell: UICollectionViewCell {
-    static let reuseIdentifier = "PostCell"
+class PostMultipleImageCell: UICollectionViewCell {
+    static let reuseIdentifier = "PostMultipleImageCell"
     
-    private let postImageView = UIImageView()
+    private var collectionView: UICollectionView!
     private let postTextLabel = UILabel()
     private let avatarImageView = UIImageView()
     private let nameLabel = UILabel()
+    
+    private var images = [String]() {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,13 +32,20 @@ class PostCell: UICollectionViewCell {
     }
     
     private func setupUI() {
+        collectionView = UICollectionView(
+            frame: .zero,
+            collectionViewLayout: createLayout()
+        )
+        collectionView.register(
+            ImageCell.self,
+            forCellWithReuseIdentifier: ImageCell.reuseIdentifier
+        )
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.dataSource = self
+        
         avatarImageView.backgroundColor = .gray
         avatarImageView.contentMode = .scaleAspectFill
         avatarImageView.roundCorners(radius: 20)
-        
-        postImageView.contentMode = .scaleAspectFill
-        postImageView.backgroundColor = .gray
-        postImageView.roundCorners(radius: 16)
         
         postTextLabel.numberOfLines = 2
         
@@ -48,7 +61,7 @@ class PostCell: UICollectionViewCell {
         let stackView = UIStackView(
             arrangedSubviews: [
                 hStackView,
-                postImageView,
+                collectionView,
                 postTextLabel
             ]
         )
@@ -67,16 +80,16 @@ class PostCell: UICollectionViewCell {
             avatarImageView.heightAnchor.constraint(equalToConstant: 40),
             avatarImageView.widthAnchor.constraint(equalToConstant: 40),
             
-            postImageView.heightAnchor.constraint(equalToConstant: 200),
-            postImageView.widthAnchor.constraint(equalTo: contentView.widthAnchor)
+            collectionView.heightAnchor.constraint(equalToConstant: 200),
+            collectionView.widthAnchor.constraint(equalTo: contentView.widthAnchor)
         ])
     }
     
     override func prepareForReuse() {
         avatarImageView.image = nil
-        postImageView.image = nil
         nameLabel.text = ""
         postTextLabel.text = ""
+        images = []
         
         loadImageTask?.cancel()
         loadImageTask = nil
@@ -90,19 +103,37 @@ class PostCell: UICollectionViewCell {
             )
         }
         nameLabel.text = post.creator.fullName
-        if let firstImage = post.images.first,
-           let postImageURL = URL(string: firstImage) {
-            loadImage(from: postImageURL) { image in
-                DispatchQueue.main.async {
-                    self.postImageView.image = image
-                }
-            }
-        }
         postTextLabel.text = post.postText
+        images = post.images
+    }
+    
+    private func createLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(1)
+        )
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.9),
+            heightDimension: .fractionalHeight(1)
+        )
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 16
+        section.orthogonalScrollingBehavior = .paging
+        
+        let layoutConfiguration = UICollectionViewCompositionalLayoutConfiguration()
+        let layout = UICollectionViewCompositionalLayout(
+            section: section,
+            configuration: layoutConfiguration
+        )
+        return layout
     }
     
     private var loadImageTask: URLSessionDataTask?
-    func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
+    private func loadImage(from url: URL, completion: @escaping (UIImage?) -> Void) {
         loadImageTask = URLSession.shared.dataTask(with: url) { data, response, error in
             // Check for errors and ensure there's data
             if let error = error {
@@ -127,5 +158,24 @@ class PostCell: UICollectionViewCell {
         }
         
         loadImageTask?.resume()
+    }
+}
+
+extension PostMultipleImageCell: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath
+    ) -> UICollectionViewCell {
+        let cell: ImageCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: ImageCell.reuseIdentifier,
+            for: indexPath
+        ) as! ImageCell
+        let image = images[indexPath.row]
+        cell.configure(with: image)
+        return cell
     }
 }
