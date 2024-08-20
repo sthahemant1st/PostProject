@@ -12,9 +12,6 @@
 		DDB72BA52C744AE500E6B912 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BA42C744AE500E6B912 /* FeedsViewController.swift */; };
 		DDB72BAA2C744AE600E6B912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB72BA92C744AE600E6B912 /* Assets.xcassets */; };
 		DDB72BAD2C744AE600E6B912 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DDB72BAC2C744AE600E6B912 /* Base */; };
-		DDB72BB82C744AE700E6B912 /* PostProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BB72C744AE700E6B912 /* PostProjectTests.swift */; };
-		DDB72BC22C744AE700E6B912 /* PostProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BC12C744AE700E6B912 /* PostProjectUITests.swift */; };
-		DDB72BC42C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BC32C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift */; };
 		DDB72BD52C744E9800E6B912 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD12C744E9800E6B912 /* ChildCoordinator.swift */; };
 		DDB72BD62C744E9800E6B912 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD22C744E9800E6B912 /* Coordinator.swift */; };
 		DDB72BD72C744E9800E6B912 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD32C744E9800E6B912 /* ParentCoordinator.swift */; };
@@ -39,6 +36,15 @@
 		DDB72C082C74556C00E6B912 /* UIViewController+BaseViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C072C74556C00E6B912 /* UIViewController+BaseViewType.swift */; };
 		DDB72C0B2C74574600E6B912 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = DDB72C0A2C74574600E6B912 /* ProgressHUD */; };
 		DDB72C0D2C745AE000E6B912 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C0C2C745AE000E6B912 /* JsonHelper.swift */; };
+		DDB72C1A2C745EC600E6B912 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C192C745EC600E6B912 /* PostCell.swift */; };
+		DDB72C1D2C745F5000E6B912 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DDB72C1C2C745F5000E6B912 /* SDWebImage */; };
+		DDB72C1F2C7460F600E6B912 /* PostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C1E2C7460F600E6B912 /* PostsUseCase.swift */; };
+		DDB72C212C74614E00E6B912 /* PostsUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C202C74614E00E6B912 /* PostsUseCaseImpl.swift */; };
+		DDB72C252C7461B200E6B912 /* PostRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C242C7461B200E6B912 /* PostRepo.swift */; };
+		DDB72C272C74621800E6B912 /* PostNetworkRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C262C74621800E6B912 /* PostNetworkRepo.swift */; };
+		DDB72C292C7462CF00E6B912 /* BaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72C282C7462CF00E6B912 /* BaseRepo.swift */; };
+		DDEB7EBE2C746BDC00B17DF5 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DDEB7EBD2C746BDC00B17DF5 /* RxCocoa */; };
+		DDEB7EC02C746BDC00B17DF5 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DDEB7EBF2C746BDC00B17DF5 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +73,7 @@
 		DDB72BAC2C744AE600E6B912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB72BAE2C744AE600E6B912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDB72BB32C744AE700E6B912 /* PostProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDB72BB72C744AE700E6B912 /* PostProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProjectTests.swift; sourceTree = "<group>"; };
 		DDB72BBD2C744AE700E6B912 /* PostProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDB72BC12C744AE700E6B912 /* PostProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProjectUITests.swift; sourceTree = "<group>"; };
-		DDB72BC32C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DDB72BD12C744E9800E6B912 /* ChildCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
 		DDB72BD22C744E9800E6B912 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DDB72BD32C744E9800E6B912 /* ParentCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentCoordinator.swift; sourceTree = "<group>"; };
@@ -94,6 +97,12 @@
 		DDB72C052C74552900E6B912 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DDB72C072C74556C00E6B912 /* UIViewController+BaseViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BaseViewType.swift"; sourceTree = "<group>"; };
 		DDB72C0C2C745AE000E6B912 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		DDB72C192C745EC600E6B912 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		DDB72C1E2C7460F600E6B912 /* PostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCase.swift; sourceTree = "<group>"; };
+		DDB72C202C74614E00E6B912 /* PostsUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsUseCaseImpl.swift; sourceTree = "<group>"; };
+		DDB72C242C7461B200E6B912 /* PostRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepo.swift; sourceTree = "<group>"; };
+		DDB72C262C74621800E6B912 /* PostNetworkRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNetworkRepo.swift; sourceTree = "<group>"; };
+		DDB72C282C7462CF00E6B912 /* BaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +110,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDEB7EBE2C746BDC00B17DF5 /* RxCocoa in Frameworks */,
 				DDB72C0B2C74574600E6B912 /* ProgressHUD in Frameworks */,
+				DDEB7EC02C746BDC00B17DF5 /* RxSwift in Frameworks */,
+				DDB72C1D2C745F5000E6B912 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +174,6 @@
 		DDB72BB62C744AE700E6B912 /* PostProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				DDB72BB72C744AE700E6B912 /* PostProjectTests.swift */,
 			);
 			path = PostProjectTests;
 			sourceTree = "<group>";
@@ -170,8 +181,6 @@
 		DDB72BC02C744AE700E6B912 /* PostProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
-				DDB72BC12C744AE700E6B912 /* PostProjectUITests.swift */,
-				DDB72BC32C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift */,
 			);
 			path = PostProjectUITests;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			children = (
 				DDB72C012C74546C00E6B912 /* BaseViewType.swift */,
 				DDB72C072C74556C00E6B912 /* UIViewController+BaseViewType.swift */,
+				DDB72C282C7462CF00E6B912 /* BaseRepo.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -305,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB72BA42C744AE500E6B912 /* FeedsViewController.swift */,
+				DDB72C192C745EC600E6B912 /* PostCell.swift */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -312,6 +323,7 @@
 		DDB72C0F2C745CCA00E6B912 /* Repos */ = {
 			isa = PBXGroup;
 			children = (
+				DDB72C232C7461A000E6B912 /* PostRepo */,
 			);
 			path = Repos;
 			sourceTree = "<group>";
@@ -319,6 +331,7 @@
 		DDB72C102C745CD200E6B912 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DDB72C222C74615300E6B912 /* PostsUseCase */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -329,6 +342,24 @@
 				DDB72BFB2C744FCC00E6B912 /* FeedsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DDB72C222C74615300E6B912 /* PostsUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72C1E2C7460F600E6B912 /* PostsUseCase.swift */,
+				DDB72C202C74614E00E6B912 /* PostsUseCaseImpl.swift */,
+			);
+			path = PostsUseCase;
+			sourceTree = "<group>";
+		};
+		DDB72C232C7461A000E6B912 /* PostRepo */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72C242C7461B200E6B912 /* PostRepo.swift */,
+				DDB72C262C74621800E6B912 /* PostNetworkRepo.swift */,
+			);
+			path = PostRepo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,6 +380,9 @@
 			name = PostProject;
 			packageProductDependencies = (
 				DDB72C0A2C74574600E6B912 /* ProgressHUD */,
+				DDB72C1C2C745F5000E6B912 /* SDWebImage */,
+				DDEB7EBD2C746BDC00B17DF5 /* RxCocoa */,
+				DDEB7EBF2C746BDC00B17DF5 /* RxSwift */,
 			);
 			productName = PostProject;
 			productReference = DDB72B9D2C744AE500E6B912 /* PostProject.app */;
@@ -424,6 +458,8 @@
 			mainGroup = DDB72B942C744AE500E6B912;
 			packageReferences = (
 				DDB72C092C74574600E6B912 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				DDB72C1B2C745F5000E6B912 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				DDEB7EBC2C746BDC00B17DF5 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = DDB72B9E2C744AE500E6B912 /* Products */;
 			projectDirPath = "";
@@ -474,16 +510,22 @@
 				DDB72BA52C744AE500E6B912 /* FeedsViewController.swift in Sources */,
 				DDB72BF12C744EBE00E6B912 /* Data+Extension.swift in Sources */,
 				DDB72BEE2C744EBE00E6B912 /* ConsoleNetworkLogger.swift in Sources */,
+				DDB72C1F2C7460F600E6B912 /* PostsUseCase.swift in Sources */,
 				DDB72BF42C744EBE00E6B912 /* HttpMethod.swift in Sources */,
 				DDB72C062C74552900E6B912 /* UIViewController+Extension.swift in Sources */,
 				DDB72BF22C744EBE00E6B912 /* Encodable+NetworkExtension.swift in Sources */,
+				DDB72C272C74621800E6B912 /* PostNetworkRepo.swift in Sources */,
 				DDB72BD52C744E9800E6B912 /* ChildCoordinator.swift in Sources */,
 				DDB72BF32C744EBE00E6B912 /* HeaderKeys.swift in Sources */,
 				DDB72BEC2C744EBE00E6B912 /* NetworkCallerProtocol.swift in Sources */,
+				DDB72C212C74614E00E6B912 /* PostsUseCaseImpl.swift in Sources */,
 				DDB72BEF2C744EBE00E6B912 /* NetworkLogger.swift in Sources */,
+				DDB72C292C7462CF00E6B912 /* BaseRepo.swift in Sources */,
 				DDB72BD62C744E9800E6B912 /* Coordinator.swift in Sources */,
 				DDB72C082C74556C00E6B912 /* UIViewController+BaseViewType.swift in Sources */,
+				DDB72C1A2C745EC600E6B912 /* PostCell.swift in Sources */,
 				DDB72BED2C744EBE00E6B912 /* URLSessionProtocol.swift in Sources */,
+				DDB72C252C7461B200E6B912 /* PostRepo.swift in Sources */,
 				DDB72BEA2C744EBE00E6B912 /* EndPointProtocol.swift in Sources */,
 				DDB72BA12C744AE500E6B912 /* AppDelegate.swift in Sources */,
 				DDB72BEB2C744EBE00E6B912 /* NetworkCaller.swift in Sources */,
@@ -500,7 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB72BB82C744AE700E6B912 /* PostProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,8 +549,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB72BC42C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift in Sources */,
-				DDB72BC22C744AE700E6B912 /* PostProjectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,9 +719,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hemant.PostProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -707,9 +750,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hemant.PostProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -839,6 +886,22 @@
 				minimumVersion = 14.1.3;
 			};
 		};
+		DDB72C1B2C745F5000E6B912 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.6;
+			};
+		};
+		DDEB7EBC2C746BDC00B17DF5 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -846,6 +909,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DDB72C092C74574600E6B912 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		DDB72C1C2C745F5000E6B912 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDB72C1B2C745F5000E6B912 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		DDEB7EBD2C746BDC00B17DF5 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDEB7EBC2C746BDC00B17DF5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DDEB7EBF2C746BDC00B17DF5 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDEB7EBC2C746BDC00B17DF5 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

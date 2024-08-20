@@ -18,5 +18,11 @@ struct Post: Decodable {
         let avatar: String
         let firstName: String
         let lastName: String
+        
+        var fullName: String {
+            "\(firstName) \(lastName)"
+        }
     }
 }
+
+typealias Posts = [Post]

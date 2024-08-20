@@ -11,7 +11,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
@@ -19,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func initializeViewController() {
-        let viewModel = FeedsViewModel()
+        let useCase = PostsUseCaseImpl(repo: PostNetworkRepo())
+        let viewModel = FeedsViewModel(postsUseCase: useCase)
         let viewController = FeedsViewController(viewModel: viewModel)
         viewModel.viewType = viewController
         let navigationController = UINavigationController(rootViewController: viewController)
