@@ -15,6 +15,22 @@
 		DDB72BB82C744AE700E6B912 /* PostProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BB72C744AE700E6B912 /* PostProjectTests.swift */; };
 		DDB72BC22C744AE700E6B912 /* PostProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BC12C744AE700E6B912 /* PostProjectUITests.swift */; };
 		DDB72BC42C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BC32C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift */; };
+		DDB72BD52C744E9800E6B912 /* ChildCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD12C744E9800E6B912 /* ChildCoordinator.swift */; };
+		DDB72BD62C744E9800E6B912 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD22C744E9800E6B912 /* Coordinator.swift */; };
+		DDB72BD72C744E9800E6B912 /* ParentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD32C744E9800E6B912 /* ParentCoordinator.swift */; };
+		DDB72BE92C744EBE00E6B912 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD82C744EBE00E6B912 /* EndPoint.swift */; };
+		DDB72BEA2C744EBE00E6B912 /* EndPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BD92C744EBE00E6B912 /* EndPointProtocol.swift */; };
+		DDB72BEB2C744EBE00E6B912 /* NetworkCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BDB2C744EBE00E6B912 /* NetworkCaller.swift */; };
+		DDB72BEC2C744EBE00E6B912 /* NetworkCallerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BDC2C744EBE00E6B912 /* NetworkCallerProtocol.swift */; };
+		DDB72BED2C744EBE00E6B912 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BDD2C744EBE00E6B912 /* URLSessionProtocol.swift */; };
+		DDB72BEE2C744EBE00E6B912 /* ConsoleNetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BDF2C744EBE00E6B912 /* ConsoleNetworkLogger.swift */; };
+		DDB72BEF2C744EBE00E6B912 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE02C744EBE00E6B912 /* NetworkLogger.swift */; };
+		DDB72BF02C744EBE00E6B912 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE22C744EBE00E6B912 /* APIError.swift */; };
+		DDB72BF12C744EBE00E6B912 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE32C744EBE00E6B912 /* Data+Extension.swift */; };
+		DDB72BF22C744EBE00E6B912 /* Encodable+NetworkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE42C744EBE00E6B912 /* Encodable+NetworkExtension.swift */; };
+		DDB72BF32C744EBE00E6B912 /* HeaderKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE52C744EBE00E6B912 /* HeaderKeys.swift */; };
+		DDB72BF42C744EBE00E6B912 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE62C744EBE00E6B912 /* HttpMethod.swift */; };
+		DDB72BF52C744EBE00E6B912 /* Network+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB72BE72C744EBE00E6B912 /* Network+TypeAlias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +63,22 @@
 		DDB72BBD2C744AE700E6B912 /* PostProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB72BC12C744AE700E6B912 /* PostProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProjectUITests.swift; sourceTree = "<group>"; };
 		DDB72BC32C744AE700E6B912 /* PostProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDB72BD12C744E9800E6B912 /* ChildCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildCoordinator.swift; sourceTree = "<group>"; };
+		DDB72BD22C744E9800E6B912 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DDB72BD32C744E9800E6B912 /* ParentCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentCoordinator.swift; sourceTree = "<group>"; };
+		DDB72BD82C744EBE00E6B912 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		DDB72BD92C744EBE00E6B912 /* EndPointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointProtocol.swift; sourceTree = "<group>"; };
+		DDB72BDB2C744EBE00E6B912 /* NetworkCaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCaller.swift; sourceTree = "<group>"; };
+		DDB72BDC2C744EBE00E6B912 /* NetworkCallerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCallerProtocol.swift; sourceTree = "<group>"; };
+		DDB72BDD2C744EBE00E6B912 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		DDB72BDF2C744EBE00E6B912 /* ConsoleNetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleNetworkLogger.swift; sourceTree = "<group>"; };
+		DDB72BE02C744EBE00E6B912 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		DDB72BE22C744EBE00E6B912 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		DDB72BE32C744EBE00E6B912 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		DDB72BE42C744EBE00E6B912 /* Encodable+NetworkExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+NetworkExtension.swift"; sourceTree = "<group>"; };
+		DDB72BE52C744EBE00E6B912 /* HeaderKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderKeys.swift; sourceTree = "<group>"; };
+		DDB72BE62C744EBE00E6B912 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		DDB72BE72C744EBE00E6B912 /* Network+TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Network+TypeAlias.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +129,8 @@
 		DDB72B9F2C744AE500E6B912 /* PostProject */ = {
 			isa = PBXGroup;
 			children = (
+				DDB72BE82C744EBE00E6B912 /* Network */,
+				DDB72BD42C744E9800E6B912 /* Coordinator */,
 				DDB72BD02C744E2100E6B912 /* App */,
 				DDB72BA42C744AE500E6B912 /* ViewController.swift */,
 				DDB72BA92C744AE600E6B912 /* Assets.xcassets */,
@@ -130,6 +164,60 @@
 				DDB72BA22C744AE500E6B912 /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		DDB72BD42C744E9800E6B912 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72BD12C744E9800E6B912 /* ChildCoordinator.swift */,
+				DDB72BD22C744E9800E6B912 /* Coordinator.swift */,
+				DDB72BD32C744E9800E6B912 /* ParentCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DDB72BDA2C744EBE00E6B912 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72BD82C744EBE00E6B912 /* EndPoint.swift */,
+				DDB72BD92C744EBE00E6B912 /* EndPointProtocol.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		DDB72BDE2C744EBE00E6B912 /* NetworkCaller */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72BDB2C744EBE00E6B912 /* NetworkCaller.swift */,
+				DDB72BDC2C744EBE00E6B912 /* NetworkCallerProtocol.swift */,
+				DDB72BDD2C744EBE00E6B912 /* URLSessionProtocol.swift */,
+			);
+			path = NetworkCaller;
+			sourceTree = "<group>";
+		};
+		DDB72BE12C744EBE00E6B912 /* NetworkLogger */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72BDF2C744EBE00E6B912 /* ConsoleNetworkLogger.swift */,
+				DDB72BE02C744EBE00E6B912 /* NetworkLogger.swift */,
+			);
+			path = NetworkLogger;
+			sourceTree = "<group>";
+		};
+		DDB72BE82C744EBE00E6B912 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DDB72BDA2C744EBE00E6B912 /* EndPoint */,
+				DDB72BDE2C744EBE00E6B912 /* NetworkCaller */,
+				DDB72BE12C744EBE00E6B912 /* NetworkLogger */,
+				DDB72BE22C744EBE00E6B912 /* APIError.swift */,
+				DDB72BE32C744EBE00E6B912 /* Data+Extension.swift */,
+				DDB72BE42C744EBE00E6B912 /* Encodable+NetworkExtension.swift */,
+				DDB72BE52C744EBE00E6B912 /* HeaderKeys.swift */,
+				DDB72BE62C744EBE00E6B912 /* HttpMethod.swift */,
+				DDB72BE72C744EBE00E6B912 /* Network+TypeAlias.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +350,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDB72BF52C744EBE00E6B912 /* Network+TypeAlias.swift in Sources */,
+				DDB72BD72C744E9800E6B912 /* ParentCoordinator.swift in Sources */,
 				DDB72BA52C744AE500E6B912 /* ViewController.swift in Sources */,
+				DDB72BF12C744EBE00E6B912 /* Data+Extension.swift in Sources */,
+				DDB72BEE2C744EBE00E6B912 /* ConsoleNetworkLogger.swift in Sources */,
+				DDB72BF42C744EBE00E6B912 /* HttpMethod.swift in Sources */,
+				DDB72BF22C744EBE00E6B912 /* Encodable+NetworkExtension.swift in Sources */,
+				DDB72BD52C744E9800E6B912 /* ChildCoordinator.swift in Sources */,
+				DDB72BF32C744EBE00E6B912 /* HeaderKeys.swift in Sources */,
+				DDB72BEC2C744EBE00E6B912 /* NetworkCallerProtocol.swift in Sources */,
+				DDB72BEF2C744EBE00E6B912 /* NetworkLogger.swift in Sources */,
+				DDB72BD62C744E9800E6B912 /* Coordinator.swift in Sources */,
+				DDB72BED2C744EBE00E6B912 /* URLSessionProtocol.swift in Sources */,
+				DDB72BEA2C744EBE00E6B912 /* EndPointProtocol.swift in Sources */,
 				DDB72BA12C744AE500E6B912 /* AppDelegate.swift in Sources */,
+				DDB72BEB2C744EBE00E6B912 /* NetworkCaller.swift in Sources */,
+				DDB72BE92C744EBE00E6B912 /* EndPoint.swift in Sources */,
 				DDB72BA32C744AE500E6B912 /* SceneDelegate.swift in Sources */,
+				DDB72BF02C744EBE00E6B912 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
