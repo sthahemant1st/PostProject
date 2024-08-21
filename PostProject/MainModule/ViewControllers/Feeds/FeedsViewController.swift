@@ -68,13 +68,9 @@ class FeedsViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.isFetchingObs
-            .bind(to: refreshControl.rx.isRefreshing)
-            .disposed(by: disposeBag)
-        
-        viewModel.postsObservable.subscribe { _ in
-            self.collectionView.reloadData()
-        }
+        viewModel.viewStateObs.subscribe(
+            onNext: handleViewState(_:)
+        )
         .disposed(by: disposeBag)
         
 //        viewModel.postsObservable
@@ -88,6 +84,36 @@ class FeedsViewController: UIViewController {
 //            }
 //            .disposed(by: disposeBag)
     }
+    
+    func handleViewState(_ state: ViewState<Posts>) {
+        switch state {
+        case .ideal:
+            let progressView = UIProgressView()
+            collectionView.backgroundView = nil
+        case .loading:
+            collectionView.backgroundView = nil
+        case .success(let response):
+            if response.count == 0 {
+                collectionView.backgroundView = EmptyStateView(
+                    onRefreshButtonTapped: { [weak self] in
+                        self?.viewModel.fetchPosts()
+                    }
+                )
+            } else {
+                collectionView.backgroundView = nil
+            }
+            refreshControl.endRefreshing()
+        case .error(let error):
+            collectionView.backgroundView = ErrorStateView(
+                title: "Error fetching Posts",
+                message: error.localizedDescription,
+                onRefreshButtonTapped: { [weak self] in self?.refresh(self!) }
+            )
+            refreshControl.endRefreshing()
+        }
+        collectionView.reloadData()
+    }
+    
     private var estimatedPostCellSize: CGSize?
     private var estimatedPostMultipleCellSize: CGSize?
 }
@@ -151,7 +177,7 @@ extension FeedsViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        viewModel.posts.count
+        viewModel.numberOfItemsInSection
     }
     
     func collectionView(

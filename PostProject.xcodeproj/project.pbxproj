@@ -51,6 +51,8 @@
 		DDEB7ECB2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECA2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift */; };
 		DDEB7ECD2C74F33800B17DF5 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */; };
 		DDEB7ECF2C74FF1800B17DF5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECE2C74FF1800B17DF5 /* ImageLoader.swift */; };
+		DDEB7ED32C75EAA900B17DF5 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ED22C75EAA900B17DF5 /* EmptyStateView.swift */; };
+		DDEB7ED52C75F0C200B17DF5 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ED42C75F0C200B17DF5 /* ErrorStateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,8 @@
 		DDEB7ECA2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Extension.swift"; sourceTree = "<group>"; };
 		DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		DDEB7ECE2C74FF1800B17DF5 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		DDEB7ED22C75EAA900B17DF5 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		DDEB7ED42C75F0C200B17DF5 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 				DDB72C002C74503900E6B912 /* Base */,
 				DDB72BD42C744E9800E6B912 /* Coordinator */,
 				DDB72BE82C744EBE00E6B912 /* Network */,
+				DDEB7ED12C75EA9000B17DF5 /* CommonModule */,
 				DDB72BF62C744F2800E6B912 /* MainModule */,
 				DDB72BA92C744AE600E6B912 /* Assets.xcassets */,
 				DDB72BAB2C744AE600E6B912 /* LaunchScreen.storyboard */,
@@ -380,6 +385,15 @@
 			path = PostRepo;
 			sourceTree = "<group>";
 		};
+		DDEB7ED12C75EA9000B17DF5 /* CommonModule */ = {
+			isa = PBXGroup;
+			children = (
+				DDEB7ED22C75EAA900B17DF5 /* EmptyStateView.swift */,
+				DDEB7ED42C75F0C200B17DF5 /* ErrorStateView.swift */,
+			);
+			path = CommonModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,9 +538,11 @@
 			files = (
 				DDB72BF52C744EBE00E6B912 /* Network+TypeAlias.swift in Sources */,
 				DDB72BFC2C744FCC00E6B912 /* FeedsViewModel.swift in Sources */,
+				DDEB7ED32C75EAA900B17DF5 /* EmptyStateView.swift in Sources */,
 				DDB72BD72C744E9800E6B912 /* ParentCoordinator.swift in Sources */,
 				DDB72BA52C744AE500E6B912 /* FeedsViewController.swift in Sources */,
 				DDEB7ECB2C74ECC600B17DF5 /* UIRefreshControl+Extension.swift in Sources */,
+				DDEB7ED52C75F0C200B17DF5 /* ErrorStateView.swift in Sources */,
 				DDEB7EC22C74769D00B17DF5 /* PostPreviewUseCase.swift in Sources */,
 				DDB72BF12C744EBE00E6B912 /* Data+Extension.swift in Sources */,
 				DDB72BEE2C744EBE00E6B912 /* ConsoleNetworkLogger.swift in Sources */,
