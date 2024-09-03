@@ -72,26 +72,16 @@ class FeedsViewController: UIViewController {
             onNext: handleViewState(_:)
         )
         .disposed(by: disposeBag)
-        
-//        viewModel.postsObservable
-//            .bind(
-//                to: collectionView.rx.items(
-//                    cellIdentifier: PostCell.reuseIdentifier,
-//                    cellType: PostCell.self
-//                )
-//            ) { row, post, cell in
-//                cell.configure(with: post)
-//            }
-//            .disposed(by: disposeBag)
     }
     
     func handleViewState(_ state: ViewState<Posts>) {
         switch state {
         case .ideal:
-            let progressView = UIProgressView()
             collectionView.backgroundView = nil
         case .loading:
-            collectionView.backgroundView = nil
+            let shimmerView = FeedsShimmerView()
+            collectionView.backgroundView = shimmerView
+            shimmerView.showGradientSkeleton()
         case .success(let response):
             if response.count == 0 {
                 collectionView.backgroundView = EmptyStateView(

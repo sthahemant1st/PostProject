@@ -11,10 +11,11 @@ import SDWebImage
 class PostCell: UICollectionViewCell {
     static let reuseIdentifier = "PostCell"
     
-    private let postImageView = UIImageView()
-    private let postTextLabel = UILabel()
     private let avatarImageView = UIImageView()
     private let nameLabel = UILabel()
+    private let postImageView = UIImageView()
+    private let postTextLabel = UILabel()
+
     private let imageLoader = ImageLoader()
     
     override init(frame: CGRect) {
@@ -30,12 +31,17 @@ class PostCell: UICollectionViewCell {
         avatarImageView.backgroundColor = .gray
         avatarImageView.contentMode = .scaleAspectFill
         avatarImageView.roundCorners(radius: 20)
+        avatarImageView.isSkeletonable = true
+        
+        nameLabel.isSkeletonable = true
         
         postImageView.contentMode = .scaleAspectFill
         postImageView.backgroundColor = .gray
         postImageView.roundCorners(radius: 16)
+        postImageView.isSkeletonable = true
         
         postTextLabel.numberOfLines = 2
+        postTextLabel.isSkeletonable = true
         
         let hStackView = UIStackView(
             arrangedSubviews: [

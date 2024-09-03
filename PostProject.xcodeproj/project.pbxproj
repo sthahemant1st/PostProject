@@ -53,6 +53,8 @@
 		DDEB7ECF2C74FF1800B17DF5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ECE2C74FF1800B17DF5 /* ImageLoader.swift */; };
 		DDEB7ED32C75EAA900B17DF5 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ED22C75EAA900B17DF5 /* EmptyStateView.swift */; };
 		DDEB7ED52C75F0C200B17DF5 /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7ED42C75F0C200B17DF5 /* ErrorStateView.swift */; };
+		DDEB7ED82C760F3B00B17DF5 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = DDEB7ED72C760F3B00B17DF5 /* SkeletonView */; };
+		DDEB7EDC2C764E3900B17DF5 /* FeedsShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEB7EDB2C764E3900B17DF5 /* FeedsShimmerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,7 @@
 		DDEB7ECE2C74FF1800B17DF5 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		DDEB7ED22C75EAA900B17DF5 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		DDEB7ED42C75F0C200B17DF5 /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
+		DDEB7EDB2C764E3900B17DF5 /* FeedsShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsShimmerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,7 @@
 				DDB72C0B2C74574600E6B912 /* ProgressHUD in Frameworks */,
 				DDEB7EC02C746BDC00B17DF5 /* RxSwift in Frameworks */,
 				DDB72C1D2C745F5000E6B912 /* SDWebImage in Frameworks */,
+				DDEB7ED82C760F3B00B17DF5 /* SkeletonView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +342,7 @@
 				DDB72C192C745EC600E6B912 /* PostCell.swift */,
 				DDEB7EC62C74EB1500B17DF5 /* PostMultipleImageCell.swift */,
 				DDEB7ECC2C74F33800B17DF5 /* ImageCell.swift */,
+				DDEB7EDB2C764E3900B17DF5 /* FeedsShimmerView.swift */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				DDB72C1C2C745F5000E6B912 /* SDWebImage */,
 				DDEB7EBD2C746BDC00B17DF5 /* RxCocoa */,
 				DDEB7EBF2C746BDC00B17DF5 /* RxSwift */,
+				DDEB7ED72C760F3B00B17DF5 /* SkeletonView */,
 			);
 			productName = PostProject;
 			productReference = DDB72B9D2C744AE500E6B912 /* PostProject.app */;
@@ -492,6 +498,7 @@
 				DDB72C092C74574600E6B912 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				DDB72C1B2C745F5000E6B912 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				DDEB7EBC2C746BDC00B17DF5 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DDEB7ED62C760F3B00B17DF5 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = DDB72B9E2C744AE500E6B912 /* Products */;
 			projectDirPath = "";
@@ -560,6 +567,7 @@
 				DDB72BD62C744E9800E6B912 /* Coordinator.swift in Sources */,
 				DDB72C082C74556C00E6B912 /* UIViewController+BaseViewType.swift in Sources */,
 				DDB72C1A2C745EC600E6B912 /* PostCell.swift in Sources */,
+				DDEB7EDC2C764E3900B17DF5 /* FeedsShimmerView.swift in Sources */,
 				DDB72BED2C744EBE00E6B912 /* URLSessionProtocol.swift in Sources */,
 				DDB72C252C7461B200E6B912 /* PostRepo.swift in Sources */,
 				DDEB7EC72C74EB1500B17DF5 /* PostMultipleImageCell.swift in Sources */,
@@ -671,7 +679,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -728,7 +736,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -942,6 +950,14 @@
 				minimumVersion = 6.7.1;
 			};
 		};
+		DDEB7ED62C760F3B00B17DF5 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.31.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -964,6 +980,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DDEB7EBC2C746BDC00B17DF5 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		DDEB7ED72C760F3B00B17DF5 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDEB7ED62C760F3B00B17DF5 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
